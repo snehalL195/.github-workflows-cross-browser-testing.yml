@@ -1,0 +1,24 @@
+name: Cross-Browser Testing
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  cross-browser-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
+      - name: Run cross-browser tests
+        uses: cypress-io/github-action@v4
+        with:
+          browser: chrome
+          record: true # Optional: Record test runs on Cypress Dashboard
