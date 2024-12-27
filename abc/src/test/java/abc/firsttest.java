@@ -7,6 +7,6 @@ public class firsttest extends basetest {
     @Test
     public void testGoogle() {
         getDriver().get("https://www.google.com"); 
-        // Add your test logic here
+ 
     }
 }

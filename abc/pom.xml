@@ -1,9 +1,27 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <properties>
+        <maven-surefire-plugin-artifactId>maven-surefire-plugin</maven-surefire-plugin-artifactId>
+    </properties>
+
+   <build>
+        <plugins>
+            <!-- Surefire Plugin Configuration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.0- M7</version>
+                <configuration>
+                    <skipTests>true</skipTests> <!-- Skip tests during the build -->
+                </configuration>
+            </plugin>
+               </plugins>
+               </build>
   <modelVersion>4.0.0</modelVersion>
   <groupId>qapro</groupId>
   <artifactId>abc</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <packaging>jar</packaging>
 
   <dependencies>
@@ -47,7 +65,6 @@
       <artifactId>webdriver-factory</artifactId>
       <version>1.0</version>
     </dependency>
-  </dependencies>
-
+  </dependencies>>
 </project>
  

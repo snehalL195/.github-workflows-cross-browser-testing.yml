@@ -19,6 +19,8 @@ public class basetest {
     public void setup(String browser) throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName(browser); 
+        
+        // local host : 4444
         driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities)); 
     }
 

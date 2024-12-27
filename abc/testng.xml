@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Parallel Test Suite">
+  <listeners>
+    <listener class-name="org.testng.internal.TestNG++, org.testng.reporters.SuiteRunnerTestNGListener, org.testng.reporters.XMLReporter, org.testng.reporters.EmailableReporter, org.testng.reporters.AbstractReporter"/>
+  </listeners>
+  <test name="Parallel Test">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="abc.firsttest"/>
+    </classes>
+  </test>
+  <test name="Parallel Test (Firefox)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="abc.firsttest"/>
+    </classes>
+  </test>
+</suite>
